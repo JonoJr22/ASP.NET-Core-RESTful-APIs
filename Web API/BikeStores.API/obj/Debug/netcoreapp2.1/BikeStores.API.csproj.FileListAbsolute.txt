@@ -1,0 +1,48 @@
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\appsettings.json
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.deps.json
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.runtimeconfig.json
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.runtimeconfig.dev.json
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.dll
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.csprojAssemblyReference.cache
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorAssemblyInfo.cache
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorAssemblyInfo.cs
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.AssemblyInfoInputs.cache
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.AssemblyInfo.cs
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorTargetAssemblyInfo.cache
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.pdb
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.dll
+D:\LEARN\BikeStores\API\BikeStores.API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.pdb
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\appsettings.json
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.deps.json
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.runtimeconfig.json
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.runtimeconfig.dev.json
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.dll
+D:\LEARN\BikeStores\API\api\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.pdb
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.csprojAssemblyReference.cache
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorAssemblyInfo.cache
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorAssemblyInfo.cs
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.AssemblyInfoInputs.cache
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.AssemblyInfo.cs
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorTargetAssemblyInfo.cache
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.dll
+D:\LEARN\BikeStores\API\api\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.pdb
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.csprojAssemblyReference.cache
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorAssemblyInfo.cache
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorAssemblyInfo.cs
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.AssemblyInfoInputs.cache
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.AssemblyInfo.cs
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.dll
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.pdb
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\appsettings.json
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.deps.json
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.runtimeconfig.json
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.runtimeconfig.dev.json
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.dll
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\bin\Debug\netcoreapp2.1\BikeStores.API.pdb
+D:\LEARN\asp.net-core-restful-apis\development\ASP.NET-Core-RESTful-APIs\Web API\BikeStores.API\obj\Debug\netcoreapp2.1\BikeStores.API.RazorTargetAssemblyInfo.cache
