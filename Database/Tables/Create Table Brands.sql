@@ -1,0 +1,7 @@
+USE BikeStores
+GO
+
+CREATE TABLE Brands (
+	BrandID INT IDENTITY (1, 1) PRIMARY KEY,
+	BrandName VARCHAR (255) NOT NULL
+);

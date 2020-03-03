@@ -1,0 +1,14 @@
+USE BikeStores
+GO
+
+CREATE TABLE Customers (
+	CustomerID INT IDENTITY (1, 1) PRIMARY KEY,
+	FirstName VARCHAR (255) NOT NULL,
+	LastName VARCHAR (255) NOT NULL,
+	Phone VARCHAR (25),
+	Email VARCHAR (255) NOT NULL,
+	Street VARCHAR (255),
+	City VARCHAR (50),
+	[State] VARCHAR (25),
+	ZIPCode VARCHAR (5)
+);

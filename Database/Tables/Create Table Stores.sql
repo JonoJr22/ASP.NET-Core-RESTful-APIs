@@ -1,0 +1,13 @@
+USE BikeStores
+GO
+
+CREATE TABLE Stores (
+	StoreID INT IDENTITY (1, 1) PRIMARY KEY,
+	StoreName VARCHAR (255) NOT NULL,
+	Phone VARCHAR (25),
+	Email VARCHAR (255),
+	Street VARCHAR (255),
+	City VARCHAR (255),
+	[State] VARCHAR (10),
+	ZIPCode VARCHAR (5)
+);

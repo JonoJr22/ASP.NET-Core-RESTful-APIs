@@ -1,0 +1,16 @@
+1. First:
+	- Create Table Categories.sql
+	- Create Table Brands.sql
+	- Create Table Customers.sql
+	- Create Table Stores.sql
+
+2. Next:
+	- Create Table Products.sql
+	- Create Table Staffs.sql
+
+3. Next:
+	- Create Table Orders.sql
+	- Create Table Stocks.sql
+
+4. Finally:
+	- Create Table OrderItems.sql

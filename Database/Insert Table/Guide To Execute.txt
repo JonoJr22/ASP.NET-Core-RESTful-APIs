@@ -1,0 +1,16 @@
+1. First:
+	- Insert Table Categories.sql
+	- Insert Table Brands.sql
+	- Insert Table Customers.sql
+	- Insert Table Stores.sql
+
+2. Next:
+	- Insert Table Products.sql
+	- Insert Table Staffs.sql
+
+3. Next:
+	- Insert Table Orders.sql
+	- Insert Table Stocks.sql
+
+4. Finally:
+	- Insert Table OrderItems.sql
