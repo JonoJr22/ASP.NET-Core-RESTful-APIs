@@ -5,13 +5,13 @@ using System.Reflection;
 
 namespace BikeStores.API.Domain.Communication
 {
-    public class SaveResponse<T>
+    public class Response<T>
     {
         public bool Success { get; private set; }
         public string Message { get; private set; }
         public T Data { get; private set; }
 
-        private SaveResponse(bool success, string message, T data)
+        private Response(bool success, string message, T data)
         {
             Success = success;
             Message = message;
@@ -19,10 +19,10 @@ namespace BikeStores.API.Domain.Communication
         }
 
         // Create a success response
-        public SaveResponse(T data) : this(true, string.Empty, data) { }
+        public Response(T data) : this(true, string.Empty, data) { }
 
         // Create an error response
-        public SaveResponse(string message) : this(false, message, default) { }
+        public Response(string message) : this(false, message, default) { }
 
     }
 }

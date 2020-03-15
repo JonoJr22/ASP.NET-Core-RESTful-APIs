@@ -21,13 +21,24 @@ namespace BikeStores.API.Services
             _databaseUtility = databaseUtility;
         }
 
-        public async Task<IEnumerable<BrandResponseModel>> ListAsync()
+        public async Task<Response<IEnumerable<BrandResponseModel>>> ListAsync()
         {
-            var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("GetBrands", null);
-            return data;
+            try
+            {
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("GetBrands", null);
+                var result = new Response<IEnumerable<BrandResponseModel>>(data);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var result = new Response<IEnumerable<BrandResponseModel>>($"An error occured when listing the brands: {ex.Message}");
+
+                return result;
+            }
+            
         }
 
-        public async Task<SaveResponse<BrandResponseModel>> SaveAsync(BrandRequestModel brand)
+        public async Task<Response<BrandResponseModel>> SaveAsync(BrandRequestModel brand)
         {
             try
             {
@@ -37,13 +48,13 @@ namespace BikeStores.API.Services
                 parameters.Add(new SqlParameter("@pjBrand", brandJSON));
 
                 var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("SaveBrand", parameters);
-                var result = new SaveResponse<BrandResponseModel>(data.First());
+                var result = new Response<BrandResponseModel>(data.First());
 
                 return result;
             }
             catch (Exception ex)
             {
-                var result = new SaveResponse<BrandResponseModel>($"An error occured when saving the brand: {ex.Message}");
+                var result = new Response<BrandResponseModel>($"An error occured when saving the brand: {ex.Message}");
 
                 return result;
             }

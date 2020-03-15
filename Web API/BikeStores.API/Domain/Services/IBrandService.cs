@@ -8,7 +8,7 @@ namespace BikeStores.API.Domain.Services
 {
     public interface IBrandService
     {
-        Task<IEnumerable<BrandResponseModel>> ListAsync();
-        Task<SaveResponse<BrandResponseModel>> SaveAsync(BrandRequestModel brand);
+        Task<Response<IEnumerable<BrandResponseModel>>> ListAsync();
+        Task<Response<BrandResponseModel>> SaveAsync(BrandRequestModel brand);
     }
 }

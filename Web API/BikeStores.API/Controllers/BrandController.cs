@@ -19,10 +19,14 @@ namespace BikeStores.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<BrandResponseModel>> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync()
         {
-            var brands = await _brandService.ListAsync();
-            return brands;
+            var result = await _brandService.ListAsync();
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Data);
         }
 
         [HttpPost]
@@ -38,5 +42,8 @@ namespace BikeStores.API.Controllers
 
             return Ok(result.Data);
         }
+
+        //[HttpPut("{id}")]
+        //public async Task<>
     }
 }
