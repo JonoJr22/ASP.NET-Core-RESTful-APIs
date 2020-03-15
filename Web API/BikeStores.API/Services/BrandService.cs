@@ -27,6 +27,7 @@ namespace BikeStores.API.Services
             {
                 var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("GetBrands", null);
                 var result = new Response<IEnumerable<BrandResponseModel>>(data);
+                
                 return result;
             }
             catch (Exception ex)
@@ -42,10 +43,10 @@ namespace BikeStores.API.Services
         {
             try
             {
-                var brandJSON = JsonConvert.SerializeObject(brand);
+                var brandJson = JsonConvert.SerializeObject(brand);
 
                 var parameters = new List<SqlParameter>();
-                parameters.Add(new SqlParameter("@pjBrand", brandJSON));
+                parameters.Add(new SqlParameter("@pjBrand", brand));
 
                 var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("SaveBrand", parameters);
                 var result = new Response<BrandResponseModel>(data.First());
@@ -55,6 +56,29 @@ namespace BikeStores.API.Services
             catch (Exception ex)
             {
                 var result = new Response<BrandResponseModel>($"An error occured when saving the brand: {ex.Message}");
+
+                return result;
+            }
+        }
+
+        public async Task<Response<BrandResponseModel>> UpdateAsync(int id, BrandRequestModel brand)
+        {
+            try
+            {
+                var brandJson = JsonConvert.SerializeObject(brand);
+
+                var parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@pnId", id));
+                parameters.Add(new SqlParameter("@pjBrand", brandJson));
+
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("UpdateBrand", parameters);
+                var result = new Response<BrandResponseModel>(data.First());
+                
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var result = new Response<BrandResponseModel>($"An error occured when updating the brand: {ex.Message}");
 
                 return result;
             }

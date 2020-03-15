@@ -9,9 +9,17 @@ BEGIN
 	BEGIN TRY
 		BEGIN TRANSACTION
 
+		DECLARE @cMessage VARCHAR(200)
+
+		IF ((SELECT COUNT(a.BrandID) FROM Brands AS a) = 0)
+		BEGIN
+			SET @cMessage = 'No brands exist'
+			RAISERROR(@cMessage, 11, 1)
+		END
+
 		SELECT 
-			a.BrandID,
-			a.BrandName
+			a.BrandID
+			, a.BrandName
 		FROM
 			Brands AS a
 

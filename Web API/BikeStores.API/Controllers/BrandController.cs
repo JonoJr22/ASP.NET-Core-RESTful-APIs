@@ -43,7 +43,18 @@ namespace BikeStores.API.Controllers
             return Ok(result.Data);
         }
 
-        //[HttpPut("{id}")]
-        //public async Task<>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] BrandRequestModel brand)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var result = await _brandService.UpdateAsync(id, brand);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Data);
+        }
     }
 }

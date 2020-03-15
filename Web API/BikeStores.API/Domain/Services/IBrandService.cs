@@ -10,5 +10,6 @@ namespace BikeStores.API.Domain.Services
     {
         Task<Response<IEnumerable<BrandResponseModel>>> ListAsync();
         Task<Response<BrandResponseModel>> SaveAsync(BrandRequestModel brand);
+        Task<Response<BrandResponseModel>> UpdateAsync(int id, BrandRequestModel brand);
     }
 }
