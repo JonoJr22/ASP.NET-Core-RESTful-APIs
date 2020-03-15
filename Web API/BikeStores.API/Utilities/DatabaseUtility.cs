@@ -41,6 +41,7 @@ namespace BikeStores.API.Utilities
                     using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
                     {
                         response = MapToModel<T>(reader);
+                        reader.NextResult();
                     }
 
                     return response;
