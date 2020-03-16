@@ -83,5 +83,25 @@ namespace BikeStores.API.Services
                 return result;
             }
         }
+
+        public async Task<Response<BrandResponseModel>> RemoveAsync(int id)
+        {
+            try
+            {
+                var parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("pnId", id));
+
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("RemoveBrand", parameters);
+                var result = new Response<BrandResponseModel>(data.First());
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var result = new Response<BrandResponseModel>($"An error occured when removing the brand: {ex.Message}");
+
+                return result;
+            }
+        }
     }
 }

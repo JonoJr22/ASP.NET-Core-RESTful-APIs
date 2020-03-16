@@ -56,5 +56,16 @@ namespace BikeStores.API.Controllers
 
             return Ok(result.Data);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var result = await _brandService.RemoveAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Data);
+        }
     }
 }
