@@ -28,5 +28,16 @@ namespace BikeStores.API.Controllers
 
             return Ok(result.Data);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAsync(int id)
+        {
+            var result = await _categoryService.CollectAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Data);
+        }
     }
 }

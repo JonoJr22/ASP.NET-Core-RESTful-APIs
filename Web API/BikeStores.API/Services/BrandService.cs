@@ -66,12 +66,12 @@ namespace BikeStores.API.Services
             {
                 var brandJson = JsonConvert.SerializeObject(brand);
 
-                var parameters = new List<SqlParameter>
+                var listParameter = new List<SqlParameter>
                 {
                     new SqlParameter("@pjBrand", brand)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("SaveBrand", parameters);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("SaveBrand", listParameter);
                 var result = new Response<BrandResponseModel>(data.First());
 
                 return result;
@@ -90,13 +90,13 @@ namespace BikeStores.API.Services
             {
                 var brandJson = JsonConvert.SerializeObject(brand);
 
-                var parameters = new List<SqlParameter>
+                var listParameter = new List<SqlParameter>
                 {
                     new SqlParameter("@pnId", id),
                     new SqlParameter("@pjBrand", brandJson)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("UpdateBrand", parameters);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("UpdateBrand", listParameter);
                 var result = new Response<BrandResponseModel>(data.First());
                 
                 return result;
@@ -113,12 +113,12 @@ namespace BikeStores.API.Services
         {
             try
             {
-                var parameters = new List<SqlParameter>
+                var listParameter = new List<SqlParameter>
                 {
                     new SqlParameter("pnId", id)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("RemoveBrand", parameters);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("RemoveBrand", listParameter);
                 var result = new Response<BrandResponseModel>(data.First());
 
                 return result;

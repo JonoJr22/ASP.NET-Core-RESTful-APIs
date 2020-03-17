@@ -8,5 +8,6 @@ namespace BikeStores.API.Domain.Services
     public interface ICategoryService
     {
         Task<Response<IEnumerable<CategoryResponseModel>>> ListAsync();
+        Task<Response<CategoryResponseModel>> CollectAsync(int id);
     }
 }

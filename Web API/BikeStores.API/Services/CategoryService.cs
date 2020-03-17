@@ -4,6 +4,8 @@ using BikeStores.API.Domain.Services;
 using BikeStores.API.Domain.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BikeStores.API.Services
@@ -29,6 +31,28 @@ namespace BikeStores.API.Services
             catch (Exception ex)
             {
                 var result = new Response<IEnumerable<CategoryResponseModel>>($"An error occured when listing the categories: {ex.Message}");
+
+                return result;
+            }
+        }
+
+        public async Task<Response<CategoryResponseModel>> CollectAsync(int id)
+        {
+            try
+            {
+                var listParameter = new List<SqlParameter>
+                {
+                    new SqlParameter("@pnId", id)
+                };
+
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("GetCategory", listParameter);
+                var result = new Response<CategoryResponseModel>(data.First());
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var result = new Response<CategoryResponseModel>($"An error occured when collecting the category: {ex.Message}");
 
                 return result;
             }
