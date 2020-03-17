@@ -16,6 +16,8 @@ namespace BikeStores.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+
             services.AddScoped<IDatabaseUtility, DatabaseUtility>();
         }
 
