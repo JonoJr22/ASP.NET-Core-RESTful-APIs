@@ -29,6 +29,17 @@ namespace BikeStores.API.Controllers
             return Ok(result.Data);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAsync(int id)
+        {
+            var result = await _brandService.CollectAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Data);
+        }
+
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] BrandRequestModel brand)
         {
