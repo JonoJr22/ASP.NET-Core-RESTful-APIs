@@ -1,7 +1,9 @@
 ﻿using BikeStores.API.Domain.Communication;
+using BikeStores.API.Domain.Models.Request;
 using BikeStores.API.Domain.Models.Response;
 using BikeStores.API.Domain.Services;
 using BikeStores.API.Domain.Utilities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -53,6 +55,30 @@ namespace BikeStores.API.Services
             catch (Exception ex)
             {
                 var result = new Response<CategoryResponseModel>($"An error occured when collecting the category: {ex.Message}");
+
+                return result;
+            }
+        }
+
+        public async Task<Response<CategoryResponseModel>> SaveAsync(CategoryRequestModel category)
+        {
+            try
+            {
+                var categoryJson = JsonConvert.SerializeObject(category);
+
+                var listParameter = new List<SqlParameter>
+                {
+                    new SqlParameter("@pjCategory", categoryJson)
+                };
+
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("SaveCategory", listParameter);
+                var result = new Response<CategoryResponseModel>(data.First());
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var result = new Response<CategoryResponseModel>($"An error occured when saving the brand: {ex.Message}");
 
                 return result;
             }
