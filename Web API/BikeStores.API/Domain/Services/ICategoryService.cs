@@ -11,5 +11,6 @@ namespace BikeStores.API.Domain.Services
         Task<Response<IEnumerable<CategoryResponseModel>>> ListAsync();
         Task<Response<CategoryResponseModel>> CollectAsync(int id);
         Task<Response<CategoryResponseModel>> SaveAsync(CategoryRequestModel category);
+        Task<Response<CategoryResponseModel>> UpdateAsync(int id, CategoryRequestModel category);
     }
 }

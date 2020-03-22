@@ -42,19 +42,19 @@ BEGIN
 		IF (@@TRANCOUNT > 0)
 		BEGIN
 			ROLLBACK TRANSACTION
-			
-			DECLARE 
-				@cErrorMessage NVARCHAR(4000)
-				, @nErrorSeverity INT
-				, @nErrorState INT
-
-			SELECT 
-				@cErrorMessage = ERROR_MESSAGE()
-				, @nErrorSeverity = ERROR_SEVERITY()
-				, @nErrorState = ERROR_STATE()
-
-			RAISERROR(@cErrorMessage, @nErrorSeverity, @nErrorState)
 		END
+		
+		DECLARE 
+			@cErrorMessage NVARCHAR(4000)
+			, @nErrorSeverity INT
+			, @nErrorState INT
+
+		SELECT 
+			@cErrorMessage = ERROR_MESSAGE()
+			, @nErrorSeverity = ERROR_SEVERITY()
+			, @nErrorState = ERROR_STATE()
+
+		RAISERROR(@cErrorMessage, @nErrorSeverity, @nErrorState)
 	END CATCH
 END
 GO

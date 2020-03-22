@@ -55,5 +55,19 @@ namespace BikeStores.API.Controllers
 
             return Ok(result.Data);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] CategoryRequestModel category)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var result = await _categoryService.UpdateAsync(id, category);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Data);
+        }
     }
 }

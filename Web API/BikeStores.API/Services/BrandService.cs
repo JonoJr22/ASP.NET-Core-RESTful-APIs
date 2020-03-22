@@ -42,12 +42,12 @@ namespace BikeStores.API.Services
         {
             try
             {
-                var listParameter = new List<SqlParameter>
+                var parameterList = new List<SqlParameter>
                 {
                     new SqlParameter("@pnId", id)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("GetBrand", listParameter);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("GetBrand", parameterList);
                 var result = new Response<BrandResponseModel>(data.First());
 
                 return result;
@@ -66,12 +66,12 @@ namespace BikeStores.API.Services
             {
                 var brandJson = JsonConvert.SerializeObject(brand);
 
-                var listParameter = new List<SqlParameter>
+                var parameterList = new List<SqlParameter>
                 {
                     new SqlParameter("@pjBrand", brand)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("SaveBrand", listParameter);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("SaveBrand", parameterList);
                 var result = new Response<BrandResponseModel>(data.First());
 
                 return result;
@@ -90,13 +90,13 @@ namespace BikeStores.API.Services
             {
                 var brandJson = JsonConvert.SerializeObject(brand);
 
-                var listParameter = new List<SqlParameter>
+                var parameterList = new List<SqlParameter>
                 {
                     new SqlParameter("@pnId", id),
                     new SqlParameter("@pjBrand", brandJson)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("UpdateBrand", listParameter);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("UpdateBrand", parameterList);
                 var result = new Response<BrandResponseModel>(data.First());
                 
                 return result;
@@ -113,12 +113,12 @@ namespace BikeStores.API.Services
         {
             try
             {
-                var listParameter = new List<SqlParameter>
+                var parameterList = new List<SqlParameter>
                 {
                     new SqlParameter("pnId", id)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("RemoveBrand", listParameter);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<BrandResponseModel>("RemoveBrand", parameterList);
                 var result = new Response<BrandResponseModel>(data.First());
 
                 return result;

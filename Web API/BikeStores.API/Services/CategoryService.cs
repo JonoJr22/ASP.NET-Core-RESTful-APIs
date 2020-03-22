@@ -42,12 +42,12 @@ namespace BikeStores.API.Services
         {
             try
             {
-                var listParameter = new List<SqlParameter>
+                var parameterList = new List<SqlParameter>
                 {
                     new SqlParameter("@pnId", id)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("GetCategory", listParameter);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("GetCategory", parameterList);
                 var result = new Response<CategoryResponseModel>(data.First());
 
                 return result;
@@ -66,12 +66,12 @@ namespace BikeStores.API.Services
             {
                 var categoryJson = JsonConvert.SerializeObject(category);
 
-                var listParameter = new List<SqlParameter>
+                var parameterList = new List<SqlParameter>
                 {
                     new SqlParameter("@pjCategory", categoryJson)
                 };
 
-                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("SaveCategory", listParameter);
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("SaveCategory", parameterList);
                 var result = new Response<CategoryResponseModel>(data.First());
 
                 return result;
@@ -81,6 +81,31 @@ namespace BikeStores.API.Services
                 var result = new Response<CategoryResponseModel>($"An error occured when saving the brand: {ex.Message}");
 
                 return result;
+            }
+        }
+
+        public async Task<Response<CategoryResponseModel>> UpdateAsync(int id, CategoryRequestModel category)
+        {
+            try
+            {
+                var categoryJson = JsonConvert.SerializeObject(category);
+
+                var parameterList = new List<SqlParameter>
+                {
+                    new SqlParameter("@pnId", id),
+                    new SqlParameter("@pjCategory", categoryJson)
+                };
+
+                var data = await _databaseUtility.ExecuteStoredProcedureAsync<CategoryResponseModel>("UpdateCategory", parameterList);
+                var result = new Response<CategoryResponseModel>(data.First());
+
+                return result;
+            }
+            catch(Exception ex)
+            {
+                var result = new Response<CategoryResponseModel>($"An error occured when updating category: {ex.Message}");
+
+                return result;  
             }
         }
     }
